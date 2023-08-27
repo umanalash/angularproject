@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.element {
+    display: grid;
+    width:100vw;
+    height:100vh;
+    align-items: center;
+    justify-content:space-around;
+    overflow: hidden;
+    overflow-x: hidden;
+    gap:20px;
+    position: relative;
+    grid-template-columns: 500px 1200px;
+    grid-template-rows: 1fr;
+}
+.container {
+    grid-column: 1;
+
+}
+.side-bar {
+    grid-column: 2;
+    position: absolute;
+    bottom:55%;
+}
+body{
+   background: url('assets/image/image4.jpg');
+   background-size: cover;
+}
+@media (max-width:789px) {
+    .element {
+        display:grid;
+       
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:100vh;
+        gap:30px;
+        overflow: scroll;
+        position: relative;
+        grid-template-columns: 400px;
+        grid-template-rows:1fr 1fr;
+    }
+    .container {
+        grid-row: 1;
+    
+    }
+    .side-bar {
+        grid-row: 2;
+        position:absolute;
+        top:10%;
+       
+    }
+   
+}
+@media (max-width:600px) {
+    .element {
+        display:grid;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:100vh;
+        gap:30px;
+        overflow: scroll;
+        position: relative;
+        grid-template-columns: 400px;
+        grid-template-rows:1fr 1fr;
+    }
+    .container {
+        grid-row: 1;
+    
+    }
+    .side-bar {
+        grid-row: 2;
+        position:absolute;
+        top:20%;
+       
+    }
+   
+}
