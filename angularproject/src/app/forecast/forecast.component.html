@@ -1,6 +1,6 @@
 <div class="locate">
     <label for="location">Location:</label>
-    <input type="searchbox" id="location" [(ngModel)]="location" (keyup.enter)="searchWeather()" (input)="changePlace(location)" placeholder="Enter location">
+    <input type="searchbox" id="location" [(ngModel)]="location" (keyup.enter)="searchWeather()" placeholder="Enter location">
     <button (click)="searchWeather()">Search</button>
   </div>
   <div class="container">
@@ -8,16 +8,13 @@
       <h1>Weather Forecasting</h1>
       <div class="wrap">
   
-        <img  alt="" width="120px" height="120px"
-        *ngIf="temperatureData.current_weather?.temperature >= 25"
-        src="../assets/image/sun2.png">
-        <img  alt="" width="130px" height="130px"
-        *ngIf="temperatureData.current_weather?.temperature <=15"
-        src="../assets/image/rain1.png">
-        <img  alt="" width="120px" height="100px"
-        *ngIf="temperatureData.current_weather?.temperature <=25 && temperatureData.current_weather?.temperature >15"
-        src="../assets/image/cloud.png">
-        
+        <img src="sun2.png" alt="" width="120px" height="120px"
+     *ngIf="temperatureData.current_weather?.temperature >= 25">
+      <img src="rain1.png" alt="" width="130px" height="130px"
+     *ngIf="temperatureData.current_weather?.temperature <= 15">
+      <img src="cloud.png" alt="" width="120px" height="100px"
+     *ngIf="temperatureData.current_weather?.temperature <= 25 && temperatureData.current_weather?.temperature > 15">
+
         <div *ngIf="temperatureData" class="weathers">
           <p class="temp">{{ temperatureData?.current_weather?.temperature}}°C</p>
         </div>

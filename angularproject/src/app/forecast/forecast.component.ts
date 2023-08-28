@@ -57,7 +57,7 @@ export class ForecastComponent {
         }
       });
     }
-    changePlace(value:string) {
+   /* changePlace(value:string) {
       if(value.trim()=== '') {
         this.filteredPlace = [];
       }
@@ -69,7 +69,7 @@ export class ForecastComponent {
       this.location = this.location;
       this.filteredPlace=[];
       this.searchWeather();
-    }
+    }*/
     getWeatherDescription(weatherCode: number): string {
       let description:string;
 

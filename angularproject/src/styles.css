@@ -11,7 +11,6 @@
     align-items: center;
     justify-content:space-around;
     overflow: hidden;
-    overflow-x: hidden;
     gap:20px;
     position: relative;
     grid-template-columns: 500px 1200px;
@@ -33,7 +32,6 @@ body{
 @media (max-width:789px) {
     .element {
         display:grid;
-       
         justify-content: center;
         align-items: center;
         width:100vw;
@@ -54,7 +52,6 @@ body{
         top:10%;
        
     }
-   
 }
 @media (max-width:600px) {
     .element {
