@@ -15,13 +15,13 @@
       <h1>Weather Forecasting</h1>
       <div class="wrap">
   
-      <img id="img1" src="assets/image/map7.jpeg" alt="weather" width="120px" height="120px"
+      <!-- <img id="img1" src="assets/image/sun2.png" alt="" width="120px" height="120px"
      *ngIf="temperatureData.current_weather?.temperature >= 25">
-      <img id="img2" src="assets/image/rain1.png" alt="" width="130px" height="130px"
+      <img id="img2" src="assets/imagerain1.png" alt="" width="130px" height="130px"
      *ngIf="temperatureData.current_weather?.temperature <= 15">
       <img id="img3" src="assets/image/cloud.png" alt="" width="150px" height="130px"
      *ngIf="temperatureData.current_weather?.temperature <= 25 && temperatureData.current_weather?.temperature > 15">
-
+ -->
         <div *ngIf="temperatureData">
           <p class="temp">{{ temperatureData?.current_weather?.temperature}}°C</p>
         </div>
