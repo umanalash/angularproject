@@ -99,7 +99,7 @@ p {
   display: flex;
 }
 
-@media (max-width:600px),(min-width:480px) {
+@media (max-width:600px) {
   .side-bar {
     display:grid;
     gap:10px;
