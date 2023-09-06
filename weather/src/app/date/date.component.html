@@ -1,0 +1,22 @@
+<div class="bar">
+  <div class="side-bar">
+    <div class="date-picker-container">
+      <label for="start-date">Start Date:</label>
+      <span>Start date:<input type="date" id="start-date" [(ngModel)]="startDate"></span> 
+       <label for="end-date">End Date:</label>
+       <span>End Date:<input type="date" id="end-date" [(ngModel)]="endDate"></span> 
+      <button id="range" (click)="updateDateRange()">Update</button>
+    </div>
+   
+    <p>T for Temperature,  H for Humidity</p>
+    <div class="sidebar-container" *ngIf = "temperatureData">
+      <div class="box-scroll">
+      <div class="box"*ngFor="let boxData of boxDatas; let i = index">
+        <div class="date">{{ boxData.date }}</div>
+        <p class="temp">T:{{ temperatureData?.hourly.temperature_2m[i] }}°C</p>
+        <p class="temp">H:{{ temperatureData?.hourly.relativehumidity_2m[i] }}%</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

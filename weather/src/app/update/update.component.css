@@ -1,0 +1,51 @@
+.con1 {
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images2.jpeg);
+  background-size: cover;
+}
+.classes {
+  background:rgba(176, 224, 230, 0.636);
+  border-radius:30px;
+  border:2px solid white;
+  padding: 25px;
+  width:700px;
+  height:590px;
+  display:grid;
+  position:absolute;
+  top:10%;
+  left:30%;
+}
+.weathers {
+  display: flex;
+  flex-direction:column;
+  gap:20px;
+  flex-wrap: wrap;
+}
+p {
+  color:black;
+  font-size:22px;
+}
+@media (max-width:600px) {
+  .con1 {
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images2.jpeg);
+    background-size: cover;
+  }
+  .classes {
+    width:350px;
+    height:600px;
+    display:grid;
+    position:absolute;
+    top:10%;
+    left:16%;
+    text-indent:20px;
+  }
+} 

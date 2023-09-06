@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merienda:wght@800&family=Playfair+Display:ital,wght@0,400;1,500&family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
+.container {
+  display:flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width:500px;
+  height:700px;
+  color:#fff;
+  text-align: center;
+  background:rgba(199, 187, 251, 0.824);
+  position: relative;
+  top:2%;
+  right:20%;
+}
+img {
+  position: absolute;
+  top:25%;
+}
+p {
+  color:black;
+}
+.wrap {
+  display: grid;
+  gap:10px;
+  grid-template-columns: 100px 100px;
+}
+
+.temp {
+  font-size: 72px;
+  font-weight: 700;
+  display: flex;
+  color:whitesmoke;
+  position: absolute;
+  top:20%;
+  right:10%;
+}
+.time {
+  font-size:26px;
+  font-weight: 500;
+  color:white;
+  position: absolute;
+  top:40%;
+  right:16%;
+}
+.counts {
+  width:230px;
+  background:rgb(200, 232, 244);
+  font-size: 18px;
+  border-radius: 5px;
+  padding-left: 7px;
+  list-style-type: none;
+  position:absolute;
+  left:30.5%;
+  top:95%;
+  z-index: 2;
+}
+li:hover {
+  background: lightgrey;
+}
+.selected {
+  background:#fff;
+}
+.image {
+  background-image: url(images1.jpeg);
+  background-size: cover;
+  height:340px;
+  display: grid;
+  gap:20px;
+}
+#img1 {
+  background-image: url(sun2.png);
+}
+#img2 {
+  background-image: url(rain1.png);
+}
+#img3 {
+  background-image: url(cloud.png);
+}
+h1 {
+  text-align: center;
+  height:40px;
+  color:white;
+}
+.weather {
+  color:black;
+  display: grid;
+  margin:10px;
+  gap:10px;
+  font-size: 22px;
+}
+.locate {
+  display:flex;
+  gap:30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width:600px;
+  height: 35px;
+  position:absolute;
+  top:4%;
+  right:38%;
+}
+input {
+  width:230px;
+  height:37px;
+  padding:4px;
+  border:3px solid rgb(172, 119, 172);
+  border-radius: 5px;
+  font-size: 18px;
+  background: rgb(245, 239, 247);
+}
+input:hover {
+  background: white;
+}
+input:focus {
+  background: rgba(245, 216, 143, 0.954);
+}
+button {
+  width:90px;
+  height:33px;
+  font-size: 18px;
+  display: inline-block;
+  outline: 0;
+  border:0;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: #000;
+  background: #fff;
+  line-height: 30px;
+  border-radius: 40px;
+  box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+  transition: all 0.2s;
+}
+button:hover{
+  box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+  transform: scale(1.01);
+}
+label {
+  font-size: 23px;
+  color:white;
+  font-family: 'Playfair Display', serif;
+
+}
+.date {
+  font-size:22px;
+  color:black;
+}
+
+@media (max-width:789px) {
+  .container {
+    width: 400px; 
+    height:770px; 
+    background: rgba(199, 187, 251, 0.83); 
+    text-align: center;
+    position: relative;
+    top:60%;
+    margin-top:90px;
+  }
+
+  img {
+    position: absolute;
+    top:14%;
+  }
+  .temp {
+    font-size: 43px;
+    font-weight: 700;
+    color:whitesmoke;
+    position: absolute;
+    top:11%;
+    right:15%;
+  }
+  .time {
+    position: absolute;
+    top:22%;
+    right:11%;
+  }
+  .locate {
+    display:flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    width:450px;
+    height: 35px;
+    position:absolute;
+    top:4%;
+    right:23%;
+    z-index: 2;
+  }
+  label {
+    visibility: hidden;
+  }
+  button {
+    width:80px;
+    font-size: 16px;
+    height:30px;
+    border-radius: 5px;
+  }
+}
+@media (max-width: 600px),(min-width:480px) {
+  .container {
+    display:flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width:400px;
+    height:700px;
+    color:#fff;
+    text-align: center;
+    background:rgba(199, 187, 251, 0.824);
+    position: relative;
+    top:-6%;
+    right:-1%;
+  }
+  img {
+    position: absolute;
+    top:26%;
+    left:3%;
+  }
+  p {
+    color:black;
+  }
+  .wrap {
+    display: grid;
+    gap:10px;
+    grid-template-columns: 100px 100px;
+  }
+  .temp {
+    font-size: 72px;
+    font-weight: 700;
+    display: flex;
+    color:whitesmoke;
+    position: absolute;
+    top:20%;
+    right:10%;
+  }
+  .time {
+    font-size:26px;
+    font-weight: 500;
+    color:white;
+    position: absolute;
+    top:40%;
+    right:10%;
+  }
+  .locate {
+    display:flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    width:450px;
+    height: 35px;
+    position:absolute;
+    top:4%;
+    right:14%;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,55 @@
+
+<div class="locate" (click)="onClickOutside()">
+  <label for="location">Location:</label>
+  <input type="searchbox" id="location" [(ngModel)]="location"  (keydown)="onKeyDown($event)" (keydown.enter)="onEnterKey()" (input)="onLocationChange(location)" placeholder="Enter location">
+  <button id="searchs" (click)="onSearchButtonClick()">Search</button>
+  <div class="counts" *ngIf="showList && filteredPlace && filteredPlace.length > 0">
+    <li *ngFor="let filter of filteredPlace; let i = index" [class.selected]="i === selectedIndex" (click)="selectPlace(filter)">
+      {{ filter.name }}
+    </li>
+  </div>
+</div>  
+
+  <div class="container">
+    <div class="image">
+      <h1>Weather Forecasting</h1>
+      <div class="wrap">
+  
+      <img id="img1" src="sun2.png" alt="" width="120px" height="120px"
+     *ngIf="temperatureData.current_weather?.temperature >= 25">
+      <img id="img2" src="rain1.png" alt="" width="130px" height="130px"
+     *ngIf="temperatureData.current_weather?.temperature <= 15">
+      <img id="img3" src="cloud.png" alt="" width="150px" height="130px"
+     *ngIf="temperatureData.current_weather?.temperature <= 25 && temperatureData.current_weather?.temperature > 15">
+
+        <div *ngIf="temperatureData">
+          <p class="temp">{{ temperatureData?.current_weather?.temperature}}°C</p>
+        </div>
+        <div *ngIf="weatherData">
+          <p class="time">{{weatherData.results?.[0].name}}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="weatherData" class="weather">
+    <div class="date">Date: {{date| date}}</div>
+
+        <h2>Location Details</h2>
+    </div>
+  
+    <div *ngIf="weatherData" class="weather">
+      <p>Timezone: {{weatherData.results?.[0].timezone}}</p>
+      <p>Country: {{ weatherData.results?.[0].country }}</p>
+    </div>
+    <div *ngIf="weatherData" class="weather">
+      <h2>Weather Details</h2>
+    </div>
+    <div *ngIf="weatherData" class="weather">
+      <p>Latitude: {{weatherData.results?.[0].latitude}}</p>
+      <p>Longitude: {{weatherData.results?.[0].longitude}}</p>
+      <p>Population:{{weatherData.results?.[0].population}}</p>
+      <p>Elevation:{{weatherData.results?.[0].elevation}}</p>
+      
+    </div>
+  </div>
+  

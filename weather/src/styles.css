@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.heads {
+    width:100vw;
+    height:100vh;
+    overflow: hidden;
+}
+.element {
+    display: grid;
+    width:100vw;
+    height:100vh;
+    justify-content:space-around;
+    overflow-y:hidden;
+    overflow: hidden;
+    position: relative;
+}
+.container {
+    overflow: hidden;
+}
+.side-bar {
+    position: absolute;
+    top:4%;
+    left:26%;
+}
+.custom.marker.icon {
+    border:none;
+}
+body{
+   background: url('assets/image/image4.jpg');
+   background-size: cover;
+}
+@media (max-width:600px),(min-width:480px) {
+  
+    .side-bar {
+        display:grid;
+        gap:40px;
+        width:450px;
+        position: relative;
+        left:0%;
+        top:-32%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+

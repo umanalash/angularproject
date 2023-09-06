@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    font-size: 26px;
+    justify-content: center;
+    align-items: center; 
+    height: 60px; 
+    background-color:#3d5a80; 
+    color: white; 
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+.top {
+    display: flex;
+    flex-direction:row;
+    gap:30px;
+    align-items: center;
+    text-align: center; 
+}
+
+
+
+

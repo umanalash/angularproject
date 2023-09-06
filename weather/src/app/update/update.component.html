@@ -1,0 +1,18 @@
+<div class="con1">
+<div class="classes">
+    <div *ngIf="temperatureData" class="weathers">
+        <p>Max - Temperature: {{temperatureData?.daily?.temperature_2m_max}}°C</p>
+        <p>Min - Temperature: {{temperatureData?.daily?.temperature_2m_min}}°C</p>
+        <p>WeatherCode:{{ getWeatherDescription(temperatureData?.current_weather?.weathercode)}}</p>
+        <p>Wind Speed:{{temperatureData?.current_weather?.windspeed}}km/hr</p>
+        <p>Wind Direction:{{temperatureData?.current_weather?.winddirection}}°</p>
+        <p>Humidity:{{temperatureData?.hourly?.relativehumidity_2m[0]}}%</p>
+        <p>Sunrise: {{temperatureData?.daily?.sunrise | date:'shortTime'}}</p>
+        <p>Sunset: {{temperatureData?.daily?.sunset | date:'shortTime'}}</p>
+        <p>Precipitation:{{temperatureData?.daily?.precipitation_sum}}mm</p>
+        <p>Rain: {{temperatureData?.daily?.rain_sum}}mm</p>
+        <p>Snowfall:{{temperatureData?.daily?.snowfall_sum}}cm</p>
+        <p>UV-Index:{{temperatureData?.daily?.uv_index_max}}mw/sq.m(Milliwatts/square meter)</p>
+    </div>
+  </div>
+  </div>
