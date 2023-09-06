@@ -197,7 +197,7 @@ label {
     border-radius: 5px;
   }
 }
-@media (max-width: 600px),(min-width:480px) {
+@media (max-width: 600px) {
   .container {
     display:flex;
     flex-direction: column;
