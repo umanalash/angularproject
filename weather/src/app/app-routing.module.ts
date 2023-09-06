@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ForecastComponent } from './forecast/forecast.component';
-import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { DateComponent } from './date/date.component';
@@ -9,7 +8,7 @@ import { UpdateComponent } from './update/update.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 
 const routes: Routes = [
-  { path: '',component:ForecastComponent}, 
+  { path: 'forecast',component:ForecastComponent}, 
   { path: 'forecast', component: ForecastComponent }, 
   { path: 'update', component: UpdateComponent }, 
   { path: 'side', component: SidebarComponent }, 

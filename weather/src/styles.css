@@ -33,7 +33,7 @@ body{
    background: url('assets/image/image4.jpg');
    background-size: cover;
 }
-@media (max-width:600px),(min-width:480px) {
+@media (max-width:600px){
   
     .side-bar {
         display:grid;

@@ -2,9 +2,9 @@
   <div class="side-bar">
     <div class="date-picker-container">
       <label for="start-date">Start Date:</label>
-      <span>Start date:<input type="date" id="start-date" [(ngModel)]="startDate"></span> 
+      <input type="date" id="start-date" [(ngModel)]="startDate">
        <label for="end-date">End Date:</label>
-       <span>End Date:<input type="date" id="end-date" [(ngModel)]="endDate"></span> 
+       <input type="date" id="end-date" [(ngModel)]="endDate"> 
       <button id="range" (click)="updateDateRange()">Update</button>
     </div>
    

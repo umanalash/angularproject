@@ -9,7 +9,7 @@
 }
 .side-bar {
   display:grid;
-  gap:10px;
+  gap:40px;
   width:900px;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@
 .date-picker-container {
   display: flex;
   width:900px;
-  gap:6px;
+  gap:16px;
   justify-content: center;
   align-items: center;
 }
@@ -37,6 +37,7 @@ input[type="date"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
 #range {
   align-items: center;
   background-color: initial;
@@ -72,9 +73,7 @@ label {
   width: 100%; 
   position: relative; 
 }
-span {
-  visibility: hidden;
-}
+
 p {
   font-size: 27px;
   font-weight: 400;
@@ -137,12 +136,6 @@ p {
   #range:hover {
     background-image: linear-gradient(#B384C9, #391F5B 50%);
   }
-  label {
-    display: none;
-  }
-  span {
-    visibility: visible;
-    font-size: 21px;
-  }
+ 
 }
   
