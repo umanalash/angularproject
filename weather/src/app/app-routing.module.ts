@@ -8,7 +8,6 @@ import { UpdateComponent } from './update/update.component';
 import { LineChartComponent } from './line-chart/line-chart.component';
 
 const routes: Routes = [
-  { path: 'forecast',component:ForecastComponent}, 
   { path: 'forecast', component: ForecastComponent }, 
   { path: 'update', component: UpdateComponent }, 
   { path: 'side', component: SidebarComponent }, 
