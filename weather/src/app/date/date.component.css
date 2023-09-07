@@ -56,7 +56,6 @@ input[type="date"] {
   justify-content: center;
   text-align: center;
   text-decoration: none;
-  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(57, 31, 91, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
 }
 #range:hover {
   background-image: linear-gradient(#B384C9, #391F5B 50%);
@@ -66,14 +65,16 @@ label {
   font-size: 20px;
   width:60px;
 }
-.box-container {
+.box-scroll {
   display: flex;
-  flex-direction: column;
-  overflow: hidden; 
-  width: 100%; 
-  position: relative; 
+  width:100vw;
+  left:-50%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position:absolute;
+  top:120%;
 }
-
 p {
   font-size: 27px;
   font-weight: 400;
@@ -101,7 +102,7 @@ p {
 @media (max-width:600px) {
   .side-bar {
     display:grid;
-    gap:10px;
+    gap:40px;
     width:450px;
     justify-content: center;
     align-items: center;
@@ -129,13 +130,17 @@ p {
     justify-content: center;
     position:absolute;
     top:120%;
+    left:-15%;
   }
   .box {
-    width:180px;
+    width:150px;
+    height:130px;
   }
   #range:hover {
     background-image: linear-gradient(#B384C9, #391F5B 50%);
   }
- 
+  p,.date {
+    font-size: 18px;
+  }
 }
   

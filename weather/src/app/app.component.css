@@ -18,6 +18,14 @@ a {
     align-items: center;
     text-align: center; 
 }
+@media (max-width:600px) {
+    header {
+        font-size: 18px;
+    }
+    .top {
+        gap:15px;
+    }
+}
 
 
 

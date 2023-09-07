@@ -1,10 +1,10 @@
 <div class="aside">
 <div class="side-bar">
     <div class="date-picker-container">
-      <label for="start-date">Start Date:</label>
-     <input type="date" id="start-date" [(ngModel)]="startDate">
-      <label for="end-date">End Date:</label>
-      <input type="date" id="end-date" [(ngModel)]="endDate">
+     <span> <label for="start-date">Start Date:</label>
+     <input type="date" id="start-date" [(ngModel)]="startDate"></span>
+     <span> <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" [(ngModel)]="endDate"></span>
       <button id="range" (click)="updateDateRange()">Update</button>
     </div>
    <p>T for Temperature,  H for Humidity</p>

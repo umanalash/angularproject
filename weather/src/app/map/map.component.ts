@@ -14,7 +14,7 @@ export class MapComponent implements OnInit {
   latitude:number=0;
   longitude:number=0;
   marker!:L.Marker;
-  location:string='Thenkasi';
+  location:string='';
   constructor(private weatherService:WeatherService, private shareService:ShareService) {}
   ngOnInit(): void {
     this.shareService.getLocation().subscribe(location => {

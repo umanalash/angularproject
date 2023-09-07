@@ -37,9 +37,7 @@ input[type="date"] {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-#start-date,#end-date {
-  visibility: visible;
-}
+
 #range {
   align-items: center;
   background-color: initial;
@@ -74,9 +72,7 @@ label {
   position:absolute;
   top:120%;
 }
-span {
-  visibility: hidden;
-}
+
 p {
   font-size: 27px;
   font-weight: 400;
@@ -144,16 +140,15 @@ p {
     position:absolute;
     top:120%;
   }
-  label {
-    display: none;
+  p,.date {
+    font-size: 18px;
   }
   .box {
-    width:180px;
+    width:150px;
+    height:130px;
   }
   span {
-    font-size:21px;
     color:white;
-    visibility: visible;
   }
   
 } 
