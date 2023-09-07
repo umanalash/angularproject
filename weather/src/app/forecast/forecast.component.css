@@ -68,13 +68,13 @@ li:hover {
   gap:20px;
 }
 #img1 {
-  background-image: url(sun2.png);
+  background: url('assets/image/sun2.png');
 }
 #img2 {
-  background-image: url(rain1.png);
+  background: url('assets/image/rain1.png');
 }
 #img3 {
-  background-image: url(cloud.png);
+  background: url('assets/image/cloud.png');
 }
 h1 {
   text-align: center;
