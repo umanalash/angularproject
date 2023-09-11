@@ -5,29 +5,29 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ShareService {
-  temperatureData:any={};
-  weatherData: any = {};
-  private selectedLocationSource = new BehaviorSubject<{ latitude: number, longitude: number }>({ latitude: 0, longitude: 0 });
-  selectedLocation$ = this.selectedLocationSource.asObservable();
+  temperatureData:any;
+  weatherData: any;
+  private selectedLocationSource$ = new BehaviorSubject<{ latitude: number, longitude: number }>({ latitude: 0, longitude: 0 });
+  selectedLocation$ = this.selectedLocationSource$.asObservable();
 
     private locationSubject = new BehaviorSubject<string>('');
   setTemperatureData(data: any) {
     this.temperatureData = data;
-    console.log('Temperature Data set:', this.temperatureData);
+    console.log('sunrise Data set:', this.temperatureData);
   }
   
   getTemperatureData() {
-    console.log('Temperature Data set:', this.temperatureData);
+    console.log('sunriseset Data set:', this.temperatureData);
     return this.temperatureData;
   }
 
   setWeatherData(data: any) {
     this.weatherData = data;
-    console.log('Temperature Data set:', this.temperatureData);
-
+    console.log('Tempterature Data set:', this.weatherData);
   }
 
   getWeatherData() {
+    console.log('tempt:',this.weatherData);
     return this.weatherData;
   }
 
@@ -39,7 +39,7 @@ export class ShareService {
     return this.locationSubject.asObservable();
   }
   emitSelectedLocation(location: { latitude: number, longitude: number }) {
-    this.selectedLocationSource.next(location);
+    this.selectedLocationSource$.next(location);
   }
   
 }

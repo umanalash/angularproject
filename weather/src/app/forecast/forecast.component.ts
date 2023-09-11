@@ -70,15 +70,20 @@ export class ForecastComponent implements OnInit{
           this.weatherservice.getCoordinates(this.latitude, this.longitude,this.startDate,this.endDate).subscribe(response => {
             this.temperatureData = response;
             this.location = this.weatherData.results[0].name;
+            console.log('Tempte Data:', this.temperatureData);
             this.shareService.setTemperatureData(this.temperatureData);
             this.shareService.setWeatherData(res);
             console.log('Temperature Data:', response);
             console.log('Updated Location:', this.location);
+            this.getTemperatureData();
           });
         }
       });
     }
-   
+    getTemperatureData() {
+      const temperatureData = this.shareService.getTemperatureData();
+      console.log('Tture Data from ShareService:', temperatureData);
+    }
 onLocationChange(value: string) {
   if (value.trim() === '') {
     this.filteredPlace = [];

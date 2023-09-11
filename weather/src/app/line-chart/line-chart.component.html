@@ -1,9 +1,9 @@
 <div class="line">
     <div class="search-container">
-        <input type="search"[(ngModel)]="location" placeholder="Enter location">
-        <button (click)="searchTemp()">Search</button>
+        <input type="text"[(ngModel)]="location" placeholder="Enter location">
+        <button type="button" (click)="searchTemp()">Search</button>
     </div>
-    <div class="chart-container">
-        <canvas  id="MyChart" ></canvas>
+    <div class="chart-container" >
+        <canvas  id="MyChart" width="900" height="700" ></canvas>
     </div>
 </div>

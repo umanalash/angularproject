@@ -2,20 +2,17 @@
     width:100vw;
     height:100vh;
     display: grid;
-    gap:10px;
     justify-content: center;
     background:rgb(251, 242, 245);
 }
 .chart-container {
-    width:670px;
-    height:300px;
-    border:2px solid black;
+    width:1800px;
+    height:700px;
 }
 .search-container {
     display:flex;
-    align-items: center;
+    align-items:center;
     gap:40px;
-    border: 2px solid red;
     justify-content: center;
 }
 button {
@@ -43,19 +40,19 @@ button:active{
     transform: translateY(2px);
 }
 input {
-    width:200px;
+    width:400px;
     height:37px;
     font-size: 20px;
     border-radius:10px;
 }
 @media (max-width:600px) {
     .chart-container {
-        width:600px;
-        height:300px;
+        width:500px;
         border:2px solid black;
     }
     .search-container {
         gap:20px;
-        border:2px solid red;
+        width:500px;
+        height:190px;
     }
 }

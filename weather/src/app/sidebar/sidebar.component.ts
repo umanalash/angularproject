@@ -14,12 +14,12 @@ export class SidebarComponent implements OnInit {
   location:string = '';
   latitude:number=0;
   longitude:number=0;
-  temperatureData: any = {}; 
+  
+  temperatureData: any = {};
   sidebarData: any = {}; 
   weatherData: any = {};
-  startDate: string = ''; 
-  endDate: string = '';
-  humidityData:number[]=[];
+  startDate: string = new Date().toISOString().slice(0, 10); 
+  endDate: string = new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10); // Default to 16 days from current date
 
   constructor(private shareService:ShareService,private weatherService: WeatherService) {
     this.calculateWeekDates();
@@ -68,7 +68,25 @@ prepareBoxData() {
     console.log('output:',  this.boxDatas)
   }
 }
+initializeBoxes() {
+  const startDate = new Date(this.startDate);
+  const endDate = new Date(this.endDate);
+  this.weatherService.getCoordinates(this.latitude, this.longitude, this.startDate, this.endDate).subscribe(data => {
+    this.temperatureData = data;
+    this.prepareBoxData();
+  });
+  let currentDate = new Date(startDate);
+  while (currentDate <= endDate) {
+    const currentDayData = this.getTemperatureDataForDay(currentDate);
+    this.boxDatas.push({
+      date: currentDate.toDateString(),
+      ...currentDayData,
+    });
 
+    currentDate = this.nextDate(currentDate);
+  }
+  console.log('box data:',this.boxDatas);
+}
 nextDate(currentDate: Date): Date {
   const nextDay = new Date(currentDate);
   nextDay.setDate(currentDate.getDate() + 1);
@@ -95,13 +113,13 @@ nextDate(currentDate: Date): Date {
   }
 
   showAlert() {
-    alert('Only a 7-day date range is allowed.');
+    alert('Only a 7-days date range is allowed.');
   }
 
   ngOnInit() {
     this.shareService.getLocation().subscribe((location) => {
       this.location = location;
-  
+      this.initializeBoxes();
       if (location) {
         this.weatherService.getWeatherData(location, 10).subscribe(
           (res: any) => {
@@ -112,9 +130,6 @@ nextDate(currentDate: Date): Date {
               this.weatherService.getCoordinates(latitude, longitude, this.startDate, this.endDate).subscribe(
                 (response: any) => {
                   this.temperatureData = response;
-                  this.temperatureData = response.hourly.temperature_2m;
-                  this.humidityData = response.hourly.relativehumidity_2m;
-              
                   this.prepareBoxData();
                 },
                 (error: any) => {
@@ -122,6 +137,9 @@ nextDate(currentDate: Date): Date {
                 }
               );
             }
+          },
+          (error: any) => {
+            console.error('Error fetching weather data:', error);
           }
         );
       }

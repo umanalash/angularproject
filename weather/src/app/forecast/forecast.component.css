@@ -67,7 +67,7 @@ li:hover {
   display: grid;
   gap:20px;
 }
-#img1 {
+/* #img1 {
   background: url('../../assets/image/sun2.png');
 }
 #img2 {
@@ -75,7 +75,7 @@ li:hover {
 }
 #img3 {
   background: url('../../assets/image/cloud.png');
-}
+} */
 h1 {
   text-align: center;
   height:40px;
@@ -115,32 +115,29 @@ input:hover {
 input:focus {
   background: rgba(245, 216, 143, 0.954);
 }
-button {
-  width:90px;
-  height:33px;
-  font-size: 18px;
-  display: inline-block;
-  outline: 0;
-  border:0;
-  cursor: pointer;
-  text-decoration: none;
-  position: relative;
+button{
+  background-image: linear-gradient(135deg, #f1df93, #e694f6);
+  border-radius: 6px;
+  box-sizing: border-box;
   color: #000;
-  background: #fff;
-  line-height: 30px;
-  border-radius: 40px;
-  box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
-  transition: all 0.2s;
+  display: block;
+  height: 40px;
+  font-size: 1.4em;
+  font-weight: 600;
+  padding: 4px;
+  position: relative;
+  text-decoration: none;
+  width:120px;
+  z-index: 2;
 }
 button:hover{
-  box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
-  transform: scale(1.01);
+    box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transform: scale(1.01);
 }
 label {
   font-size: 23px;
   color:white;
   font-family: 'Playfair Display', serif;
-
 }
 .date {
   font-size:22px;
@@ -157,7 +154,6 @@ label {
     top:60%;
     margin-top:90px;
   }
-
   img {
     position: absolute;
     top:14%;
