@@ -58,7 +58,7 @@ input[type="date"] {
   text-decoration: none;
 }
 #range:hover {
-  background-image: linear-gradient(#B384C9, #391F5B 50%);
+  background-image: linear-gradient(#b370df , #75d9ed );
 }
 label {
   color:white;

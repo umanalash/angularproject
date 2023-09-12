@@ -38,7 +38,7 @@ input[type="date"] {
   border-radius: 5px;
 }
 
-/* #range {
+#range {
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(rgba(217, 165, 242, 0.84), rgba(246, 119, 72, 0.84) 50%);
@@ -58,8 +58,8 @@ input[type="date"] {
   text-decoration: none;
 }
 #range:hover {
-  background-image: linear-gradient(#B384C9, #391F5B 50%);
-} */
+  background-image: linear-gradient(#B384C9, #6dcbd6 );
+} 
 label {
   font-size: 20px;
   width:60px;
@@ -72,8 +72,6 @@ label {
   position:absolute;
   top:120%;
 }
-
-
 p {
   font-size: 27px;
   font-weight: 400;
